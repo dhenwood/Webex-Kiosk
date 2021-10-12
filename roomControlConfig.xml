@@ -1,0 +1,48 @@
+<Extensions>
+  <Version>1.8</Version>
+  <Panel>
+    <Order>2</Order>
+    <PanelId>kioskModePage</PanelId>
+    <Origin>local</Origin>
+    <Type>Home</Type>
+    <Icon>Helpdesk</Icon>
+    <Color>#875AE0</Color>
+    <Name>Kiosk Mode</Name>
+    <ActivityType>Custom</ActivityType>
+    <Page>
+      <Name>Kiosk Mode</Name>
+      <Row>
+        <Name>Customer</Name>
+        <Widget>
+          <WidgetId>kioskModeSelect</WidgetId>
+          <Type>GroupButton</Type>
+          <Options>size=4</Options>
+          <ValueSpace>
+            <Value>
+              <Key>qantas</Key>
+              <Name>Qantas</Name>
+            </Value>
+            <Value>
+              <Key>nrma</Key>
+              <Name>NRMA</Name>
+            </Value>
+            <Value>
+              <Key>westpac</Key>
+              <Name>Westpac</Name>
+            </Value>
+          </ValueSpace>
+        </Widget>
+      </Row>
+      <Row>
+        <Name/>
+        <Widget>
+          <WidgetId>kioskModeCancel</WidgetId>
+          <Name>Cancel</Name>
+          <Type>Button</Type>
+          <Options>size=4</Options>
+        </Widget>
+      </Row>
+      <Options/>
+    </Page>
+  </Panel>
+</Extensions>
