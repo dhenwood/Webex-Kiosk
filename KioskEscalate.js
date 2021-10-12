@@ -17,6 +17,8 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/westpacKiosk/indexVn.html?deviceId=" + deviceId})
   }else if(event.PanelId == 'escalateWestpacGr'){
     xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/westpacKiosk/indexGr.html?deviceId=" + deviceId})
+  }else if(event.PanelId == 'hangupBtn'){
+    xapi.command("call Disconnect");
   }
 });
 
