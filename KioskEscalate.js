@@ -9,6 +9,10 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
     xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/iagKiosk/index.html?deviceId=" + deviceId})
   }else if(event.PanelId == 'escalateNrmaVn'){
     xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/iagKiosk/indexVn.html?deviceId=" + deviceId})
+  }else if(event.PanelId == 'escalateWestpacEn'){
+    xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/westpacKiosk/index.html?deviceId=" + deviceId})
+  }else if(event.PanelId == 'escalateWestpacVn'){
+    xapi.command("UserInterface WebView Display", {Title: "Options", Url: "https://talk2spark.com/westpacKiosk/indexVn.html?deviceId=" + deviceId})
   }
 });
 
