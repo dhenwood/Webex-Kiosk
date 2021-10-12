@@ -52,7 +52,6 @@ function getDevice(serialNumber){
     (result) => {
        //if (response.StatusCode == 200) {
       var code = result.StatusCode;
-      console.log("code: " + code);
       var body = result.Body;
       var totalItems = JSON.parse(body).items.length
       if(totalItems > 0){
