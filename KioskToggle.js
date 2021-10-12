@@ -17,8 +17,12 @@ xapi.event.on('UserInterface Extensions Widget Action', (event) => {
           toggleKiosk(true);
           var url = "https://www.employees.org/~dhenwood/WbxWallpaper/nrmaKiosk.zip";
           updateWallpaper("NRMA", url);
-        }else if (event.Value == 'cba'){
-          console.log("cba");
+        }else if (event.Value == 'westpac'){
+          console.log("westpacPressed")
+          panelId = "escalateWestpac";
+          toggleKiosk(true);
+          var url = "https://www.employees.org/~dhenwood/WbxWallpaper/westpacKiosk.zip";
+          updateWallpaper("Westpac", url);
         }
       }
     }else if(event.WidgetId == 'kioskModeCancel'){
