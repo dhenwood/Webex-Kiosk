@@ -22,8 +22,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
   }
 });
 
-// Prevent audio volume from changing (also noise removal, mute, external things, also power off, etc)
-// https://github.com/alvulovi/VideoKiosk/blob/main/VideoKiosk.js 
+// Additional controls such preventing chaning audio volume/mute/etc may also wish to be performed.
 
 function init(){
   xapi.status.get('SystemUnit Hardware Module SerialNumber').then ((value) => {
@@ -34,7 +33,15 @@ function init(){
 
 
 function getDevice(serialNumber){
-  // Need to get deviceId  ** USING TEMP TOKEN RIGHT NOW (need to change to BOT) **
+  /*
+  Need to get deviceId from serial number
+  
+  Whilst a token can be created a number of different ways, for the purposes of this, a BOT token is probably best suited.
+  This can be done by following these instructions at https://developer.webex.com/docs/bots
+  Once created, save the BOT token and paste it into the following line.
+  Furthermore, from Webex Control Hub for the device(s), associate the BOT to the devices you which to perform this on.
+  */
+  
   const TOKEN = "<insert Token>";
   const BEARERTOKEN = "Authorization: Bearer " + TOKEN;
   const WEBEXDEVICEURL = 'https://webexapis.com/v1/devices?serial=' + serialNumber; 
