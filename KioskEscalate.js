@@ -22,7 +22,7 @@ xapi.event.on('UserInterface Extensions Panel Clicked', (event) => {
   }
 });
 
-// Additional controls such preventing chaning audio volume/mute/etc may also wish to be performed.
+// Additional controls such preventing changing audio volume/mute/etc may also wish to be performed.
 
 function init(){
   xapi.status.get('SystemUnit Hardware Module SerialNumber').then ((value) => {
@@ -37,7 +37,7 @@ function getDevice(serialNumber){
   Need to get deviceId from serial number
   
   Whilst a token can be created a number of different ways, for the purposes of this, a BOT token is probably best suited.
-  This can be done by following these instructions at https://developer.webex.com/docs/bots
+  This can be done by following the instructions at https://developer.webex.com/docs/bots
   Once created, save the BOT token and paste it into the following line.
   Furthermore, from Webex Control Hub for the device(s), associate the BOT to the devices you which to perform this on.
   */
@@ -50,8 +50,8 @@ function getDevice(serialNumber){
   xapi.command('HttpClient Get', { 'Header': [CONTENT_TYPE, BEARERTOKEN] , 'Url':WEBEXDEVICEURL, 'AllowInsecureHTTPS': 'True'})
   .then(
     (result) => {
-       //if (response.StatusCode == 200) {
-      var code = result.StatusCode;
+      //if (response.StatusCode == 200) {
+      //var code = result.StatusCode;
       var body = result.Body;
       var totalItems = JSON.parse(body).items.length
       if(totalItems > 0){
